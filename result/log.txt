@@ -1,0 +1,238 @@
+Started by an SCM change
+Obtained Jenkinsfile from git https://github.com/GungIndi/simple-python-pyinstaller-app.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE
+[Pipeline] {
+[Pipeline] withDockerContainer
+Jenkins seems to be running inside container 4723be790ce06a4ec4179754514384936d2590304f23db36f5c924e23298b2cd
+but /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE could not be found among []
+but /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE@tmp could not be found among []
+$ docker run -t -d -u 1000:1000 -w /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE -v /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE:/var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE:rw,z -v /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE@tmp:/var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** python:3.12.1-alpine3.19 cat
+$ docker top 0721b8aaf2390ed9b69a5ff30f462e5aad86ff29548a913e93bbb0aa491057ee -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential token
+Warning: JENKINS-30600: special launcher org.jenkinsci.plugins.docker.workflow.WithContainerStep$Decorator$1@5c41120b; decorates hudson.Launcher$LocalLauncher@587e9d5b will be ignored (a typical symptom is the Git executable not being run inside a designated container)
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/GungIndi/simple-python-pyinstaller-app.git # timeout=10
+Fetching upstream changes from https://github.com/GungIndi/simple-python-pyinstaller-app.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/GungIndi/simple-python-pyinstaller-app.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision ca91c30da9f7b7e4ecd7e422c97893698f9d65a7 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ca91c30da9f7b7e4ecd7e422c97893698f9d65a7 # timeout=10
+Commit message: "change jenkinsfile"
+ > git rev-list --no-walk 27c2ccad83a351da2e622f8a86feffa0cb538859 # timeout=10
+[Pipeline] sh
++ python -m py_compile sources/add2vals.py sources/calc.py
+[Pipeline] stash
+Stashed 4 file(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 0721b8aaf2390ed9b69a5ff30f462e5aad86ff29548a913e93bbb0aa491057ee
+$ docker rm -f 0721b8aaf2390ed9b69a5ff30f462e5aad86ff29548a913e93bbb0aa491057ee
+[Pipeline] // withDockerContainer
+[Pipeline] withDockerContainer
+Jenkins seems to be running inside container 4723be790ce06a4ec4179754514384936d2590304f23db36f5c924e23298b2cd
+but /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE could not be found among []
+but /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE@tmp could not be found among []
+$ docker run -t -d -u 1000:1000 -w /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE -v /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE:/var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE:rw,z -v /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE@tmp:/var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** qnib/pytest cat
+$ docker top f1087013f88e2f4df5dac736446ac737b608cc3823bbadf49162800e2a876514 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential token
+Warning: JENKINS-30600: special launcher org.jenkinsci.plugins.docker.workflow.WithContainerStep$Decorator$1@37c48e4f; decorates hudson.Launcher$LocalLauncher@58f19b27 will be ignored (a typical symptom is the Git executable not being run inside a designated container)
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/GungIndi/simple-python-pyinstaller-app.git # timeout=10
+Fetching upstream changes from https://github.com/GungIndi/simple-python-pyinstaller-app.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/GungIndi/simple-python-pyinstaller-app.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision ca91c30da9f7b7e4ecd7e422c97893698f9d65a7 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ca91c30da9f7b7e4ecd7e422c97893698f9d65a7 # timeout=10
+Commit message: "change jenkinsfile"
+[Pipeline] sh
++ py.test --junit-xml test-reports/results.xml sources/test_calc.py
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.14, pytest-3.5.0, py-1.5.3, pluggy-0.6.0
+rootdir: /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE, inifile:
+plugins: cov-2.5.1
+collected 5 items
+
+sources/test_calc.py .....                                               [100%]
+
+ generated xml file: /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE/test-reports/results.xml 
+=========================== 5 passed in 0.03 seconds ===========================
+[Pipeline] junit
+Recording test results
+[Checks API] No suitable checks publisher found.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 f1087013f88e2f4df5dac736446ac737b608cc3823bbadf49162800e2a876514
+$ docker rm -f f1087013f88e2f4df5dac736446ac737b608cc3823bbadf49162800e2a876514
+[Pipeline] // withDockerContainer
+[Pipeline] withDockerContainer
+Jenkins seems to be running inside container 4723be790ce06a4ec4179754514384936d2590304f23db36f5c924e23298b2cd
+but /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE could not be found among []
+but /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE@tmp could not be found among []
+$ docker run -t -d -u 1000:1000 -w /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE -v /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE:/var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE:rw,z -v /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE@tmp:/var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** python:3.12.1-alpine3.19 cat
+$ docker top fefc55be4a1d676e3abc579108f1f69e6ab59152c0221a3a10759f492805ba21 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Manual Approval)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential token
+Warning: JENKINS-30600: special launcher org.jenkinsci.plugins.docker.workflow.WithContainerStep$Decorator$1@4942024f; decorates hudson.Launcher$LocalLauncher@4c72f777 will be ignored (a typical symptom is the Git executable not being run inside a designated container)
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/GungIndi/simple-python-pyinstaller-app.git # timeout=10
+Fetching upstream changes from https://github.com/GungIndi/simple-python-pyinstaller-app.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/GungIndi/simple-python-pyinstaller-app.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision ca91c30da9f7b7e4ecd7e422c97893698f9d65a7 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ca91c30da9f7b7e4ecd7e422c97893698f9d65a7 # timeout=10
+Commit message: "change jenkinsfile"
+[Pipeline] input
+Lanjutkan ke tahap Deploy?
+gasss or Abort
+Approved by Dicoding Indonesia
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 fefc55be4a1d676e3abc579108f1f69e6ab59152c0221a3a10759f492805ba21
+$ docker rm -f fefc55be4a1d676e3abc579108f1f69e6ab59152c0221a3a10759f492805ba21
+[Pipeline] // withDockerContainer
+[Pipeline] stage
+[Pipeline] { (Deploy)
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] dir
+Running in /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE/29
+[Pipeline] {
+[Pipeline] withCredentials
+Masking supported pattern matches of $VERCEL_TOKEN
+[Pipeline] {
+[Pipeline] unstash
+[Pipeline] sh
++ pwd
++ docker run --rm -v /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE/29/sources:/src cdrx/pyinstaller-linux:python2 pyinstaller -F add2vals.py
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+pyinstaller -F add2vals.py
+143 INFO: PyInstaller: 3.6
+143 INFO: Python: 2.7.17
+145 INFO: Platform: Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-debian-wheezy-sid
+146 INFO: wrote /src/add2vals.spec
+168 INFO: UPX is available.
+172 INFO: Extending PYTHONPATH with paths
+['/src', '/src']
+172 INFO: checking Analysis
+172 INFO: Building Analysis because Analysis-00.toc is non existent
+172 INFO: Initializing module dependency graph...
+179 INFO: Caching module graph hooks...
+202 INFO: Caching module dependency graph...
+243 INFO: running Analysis Analysis-00.toc
+280 INFO: Analyzing /src/add2vals.py
+390 INFO: Processing module hooks...
+391 INFO: Loading module hook "hook-encodings.py"...
+4723 INFO: Looking for ctypes DLLs
+4723 INFO: Analyzing run-time hooks ...
+4734 INFO: Looking for dynamic libraries
+5309 INFO: Looking for eggs
+5310 INFO: Using Python library /root/.pyenv/versions/2.7.17/lib/libpython2.7.so.1.0
+5314 INFO: Warnings written to /src/build/add2vals/warn-add2vals.txt
+5340 INFO: Graph cross-reference written to /src/build/add2vals/xref-add2vals.html
+5438 INFO: checking PYZ
+5438 INFO: Building PYZ because PYZ-00.toc is non existent
+5438 INFO: Building PYZ (ZlibArchive) /src/build/add2vals/PYZ-00.pyz
+5859 INFO: Building PYZ (ZlibArchive) /src/build/add2vals/PYZ-00.pyz completed successfully.
+5936 INFO: checking PKG
+5936 INFO: Building PKG because PKG-00.toc is non existent
+5936 INFO: Building PKG (CArchive) PKG-00.pkg
+12071 INFO: Building PKG (CArchive) PKG-00.pkg completed successfully.
+12075 INFO: Bootloader /root/.pyenv/versions/2.7.17/lib/python2.7/site-packages/PyInstaller/bootloader/Linux-64bit/run
+12075 INFO: checking EXE
+12075 INFO: Building EXE because EXE-00.toc is non existent
+12075 INFO: Building EXE from EXE-00.toc
+12080 INFO: Appending archive to ELF section in EXE /src/dist/add2vals
+12114 INFO: Building EXE from EXE-00.toc completed successfully.
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] sh
++ pwd
++ sudo chmod -R -u+rwx /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE/29/sources/dist/
+[Pipeline] sh
++ pwd
++ sudo chown -R jenkins:jenkins /var/jenkins_home/workspace/submission-cicd-pipeline-gung_indi_ZgUE/29/sources/dist/
+[Pipeline] sh
++ vercel --version
+Vercel CLI 33.1.0
+33.1.0
+[Pipeline] sh
++ vercel --cwd sources/dist/ --no-color --token **** pull --yes
+Vercel CLI 33.1.0
+Loading scopes…
+Searching for existing projects…
+Linked to gungindis-projects/dist (created .vercel and added it to .gitignore)
+> Downloading `development` Environment Variables for Project dist
+Downloading
+Created .vercel/.env.development.local file  [599ms]
+> Downloading project settings
+Downloaded project settings to ~/workspace/submission-cicd-pipeline-gung_indi_ZgUE/29/sources/dist/.vercel/project.json [1ms]
+[Pipeline] sh
++ vercel --cwd sources/dist/ --no-color --token **** build --prod --yes
+Vercel CLI 33.1.0
+Build Completed in .vercel/output [30ms]
+[Pipeline] sh
++ vercel --cwd sources/dist/ --no-color --token **** deploy --prebuilt --prod
+Vercel CLI 33.1.0
+Retrieving project…
+Deploying gungindis-projects/dist
+Inspect: https://vercel.com/gungindis-projects/dist/2CSd26UFfX2pZDEHK9VQ2oRmVxuA [1s]
+Production: https://dist-c5gqj2nkh-gungindis-projects.vercel.app [1s]
+https://dist-c5gqj2nkh-gungindis-projects.vercel.appQueued
+Building
+Completing
+[Pipeline] sleep
+Sleeping for 1 min 0 sec
+[Pipeline] cleanWs
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] done
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
